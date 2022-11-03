@@ -35,10 +35,10 @@ export default {
   mounted: function () {
     function handleCredentialResponse(response) {
       let responsePayload = jwt_decode(response.credential);
-      console.log("ID: " + responsePayload.sub);
+      /* console.log("ID: " + responsePayload.sub);
       console.log("Name: " + responsePayload.name);
       console.log("Image url: " + responsePayload.picture);
-      console.log("email: " + responsePayload.email);
+      console.log("email: " + responsePayload.email); */
       alert(responsePayload.name + " signed in!");
     }
     window.onload = function () {
