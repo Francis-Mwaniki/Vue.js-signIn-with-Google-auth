@@ -21,7 +21,7 @@
 
 <script>
 // @ is an alias to /src
-import jwt_decode from "jwt-decode";
+/* import jwt_decode from "jwt-decode"; */
 export default {
   name: "HomeView",
   data() {
