@@ -14,13 +14,14 @@
       <input type="password" v-model="password" placeholder="Password" id="password" />
 
       <button class="login">Log In</button>
+      <div id="buttonDiv"></div>
     </form>
   </body>
 </template>
 
 <script>
 // @ is an alias to /src
-/* import jwt_decode from "jwt-decode"; */
+import jwt_decode from "jwt-decode";
 export default {
   name: "HomeView",
   data() {
@@ -32,14 +33,14 @@ export default {
   components: {},
   methods: {},
   mounted: function () {
-    /*   function handleCredentialResponse(response) { */
-    /* let responsePayload = jwt_decode(response.credential); */
-    /* console.log(response.credential); */
-    /* console.log("ID: " + responsePayload.sub);
+    function handleCredentialResponse(response) {
+      let responsePayload = jwt_decode(response.credential);
+      /* console.log("ID: " + responsePayload.sub);
       console.log("Name: " + responsePayload.name);
       console.log("Image url: " + responsePayload.picture);
       console.log("email: " + responsePayload.email); */
-    /*  } */
+      alert(responsePayload.name + " signed in!");
+    }
     window.onload = function () {
       google.accounts.id.initialize({
         client_id:
@@ -55,9 +56,9 @@ export default {
   },
   methods: {
     login() {
-      /*  alert(this.username + " signed in");
+      alert(this.username + " signed in");
       this.username = "";
-      this.password = ""; */
+      this.password = "";
     },
   },
 };
