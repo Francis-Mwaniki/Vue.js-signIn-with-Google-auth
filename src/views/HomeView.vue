@@ -14,7 +14,6 @@
       <input type="password" v-model="password" placeholder="Password" id="password" />
 
       <button class="login">Log In</button>
-      <div id="buttonDiv"></div>
     </form>
   </body>
 </template>
@@ -33,14 +32,14 @@ export default {
   components: {},
   methods: {},
   mounted: function () {
-    function handleCredentialResponse(response) {
-      /* let responsePayload = jwt_decode(response.credential); */
-      /* console.log(response.credential); */
-      /* console.log("ID: " + responsePayload.sub);
+    /*   function handleCredentialResponse(response) { */
+    /* let responsePayload = jwt_decode(response.credential); */
+    /* console.log(response.credential); */
+    /* console.log("ID: " + responsePayload.sub);
       console.log("Name: " + responsePayload.name);
       console.log("Image url: " + responsePayload.picture);
       console.log("email: " + responsePayload.email); */
-    }
+    /*  } */
     window.onload = function () {
       google.accounts.id.initialize({
         client_id:
