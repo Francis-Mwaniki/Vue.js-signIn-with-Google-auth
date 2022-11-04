@@ -34,12 +34,12 @@ export default {
   methods: {},
   mounted: function () {
     function handleCredentialResponse(response) {
-      let responsePayload = jwt_decode(response.credential);
+      /* let responsePayload = jwt_decode(response.credential); */
+      /* console.log(response.credential); */
       /* console.log("ID: " + responsePayload.sub);
       console.log("Name: " + responsePayload.name);
       console.log("Image url: " + responsePayload.picture);
       console.log("email: " + responsePayload.email); */
-      alert(responsePayload.name + " signed in!");
     }
     window.onload = function () {
       google.accounts.id.initialize({
@@ -56,9 +56,9 @@ export default {
   },
   methods: {
     login() {
-      alert(this.username + " signed in");
+      /*  alert(this.username + " signed in");
       this.username = "";
-      this.password = "";
+      this.password = ""; */
     },
   },
 };
